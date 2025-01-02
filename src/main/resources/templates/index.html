@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CounselNet Login Page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<style>
+		/* Background Gradient */
+		body {
+			background: linear-gradient(to right, #ff7e5f, #feb47b);
+			font-family: 'Arial', sans-serif;
+			min-height: 76vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin: 0;
+		}
+
+		/* Login Card */
+		.container {
+			max-width: 450px;
+			width: 100%;
+			background-color: #fff;
+			padding: 30px;
+			border-radius: 15px;
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+			animation: slideIn 1s ease-out;
+		}
+
+		@keyframes slideIn {
+			from {
+				transform: translateY(-50px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		/* Header Styling */
+		h1 {
+			text-align: center;
+			color: #333;
+			font-size: 2rem;
+			margin-bottom: 20px;
+		}
+
+		/* Form styling */
+		table {
+			width: 100%;
+			border-spacing: 0;
+		}
+
+		td {
+			padding: 10px;
+		}
+
+		/* Input Fields */
+		input[type="email"],
+		input[type="password"] {
+			width: 100%;
+			padding: 12px;
+			border-radius: 10px;
+			border: 1px solid #ccc;
+			margin-bottom: 20px;
+			font-size: 1rem;
+			box-sizing: border-box;
+			transition: 0.3s ease;
+		}
+
+		input[type="email"]:focus,
+		input[type="password"]:focus {
+			border-color: #ff7e5f;
+			box-shadow: 0 0 5px rgba(255, 126, 95, 0.6);
+		}
+
+		/* Button */
+		input[type="submit"] {
+			width: 100%;
+			background-color: #ff7e5f;
+			color: white;
+			border: none;
+			border-radius: 10px;
+			padding: 12px;
+			font-size: 1.1rem;
+			cursor: pointer;
+			transition: 0.3s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #feb47b;
+		}
+
+		/* Register button */
+		.register-btn {
+			width: 100%;
+			background-color: #fff;
+			color: #ff7e5f;
+			border: 2px solid #ff7e5f;
+			border-radius: 10px;
+			padding: 12px;
+			font-size: 1.1rem;
+			cursor: pointer;
+			text-align: center;
+			transition: 0.3s ease;
+		}
+
+		.register-btn:hover {
+			background-color: #ff7e5f;
+			color: white;
+		}
+
+		/* Register link */
+		.text-center a {
+			color: #ff7e5f;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		.text-center a:hover {
+			color: #feb47b;
+		}
+
+		/* Error message */
+		.alert {
+			background-color: #f8d7da;
+			color: #721c24;
+			padding: 15px;
+			border-radius: 8px;
+			font-size: 0.9rem;
+			margin-bottom: 20px;
+		}
+
+		/* Footer */
+		footer {
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			background-color: #ff7e5f;
+			color: white;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.footerContainer {
+			display: flex;
+			justify-content: center;
+		}
+
+		.socialIcons {
+			display: flex;
+		}
+
+		.socialIcons a {
+			text-decoration: none;
+			padding: 10px;
+			background-color: white;
+			border-radius: 50%;
+			margin: 10px;
+		}
+
+		.socialIcons a i {
+			font-size: 2em;
+			color: black;
+			opacity: 0.9;
+		}
+
+		.socialIcons a:hover {
+			background-color: #111;
+			transition: 0.5s;
+		}
+
+		.socialIcons a:hover i {
+			color: white;
+			transition: 0.5s;
+		}
+
+		.footerBottom {
+			padding-top: 10px;
+			font-size: 1rem;
+		}
+
+		#backToTopButton {
+			position: fixed;
+			bottom: 80px;
+			right: 20px;
+			background-color: rgba(51, 51, 51, 0.6);
+			color: #fff;
+			border: none;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			font-size: 18px;
+			text-align: center;
+			line-height: 50px;
+			cursor: pointer;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+			transition: background-color 0.3s ease, opacity 0.3s ease;
+			opacity: 0.4;
+		}
+
+		#backToTopButton:hover {
+			background-color: #555;
+			opacity: 1;
+		}
+
+		/* Footer Styling */
+		footer {
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			background-color: #ff7e5f;
+			/* Set footer background color */
+			color: white;
+			padding: 20px;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container mt-5 mb-5">
+		<h1>Login Page</h1>
+
+		<div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+
+		<form th:action="@{/login}" th:object="${counsellor}" method="post">
+			<table>
+				<tr>
+					<td>Email : </td>
+					<td><input type="email" th:field="*{counsellorEmail}" required></td>
+				</tr>
+				<tr>
+					<td>Password : </td>
+					<td><input type="password" th:field="*{counsellorPassword}" required></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Login"> </td>
+				</tr>
+				<tr>
+					<td>
+						<p>Don't have an account?</p>
+					</td>
+					<td><a href="register" class="register-btn">Register</a></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<footer>
+		<div class="footerContainer">
+			<div class="socialIcons">
+				<a href="tel:+917620085558"><i class="fa-solid fa-phone"></i></a>
+				<a href="mailto:chaitanyakhowal8@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+				<a href="https://www.linkedin.com/in/chaitanya-khowal-331b47272/"><i
+						class="fa-brands fa-linkedin"></i></a>
+				<a href="https://github.com/ChaitanyaKhowal"><i class="fa-brands fa-github"></i></a>
+				<a href="https://www.instagram.com/devil_since.2001/profilecard/?igsh=cmx2ODNhcW5yY3N5"><i
+						class="fa-brands fa-instagram"></i></a>
+			</div>
+		</div>
+
+		<div class="footerBottom">
+			<p>Thanks for visiting! Feel free to connect with me.</p>
+			<p>Designer |<span class="designer">Chaitanya Khowal</span></p>
+			<p>Copyright &copy;2024;</p>
+		</div>
+
+		<a href="#top" id="backToTopButton" title="Go to top">&#8679; Top</a>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
