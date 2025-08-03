@@ -112,4 +112,4 @@ Open in browser: http://localhost:8080/
 
 **Chaitanya Khowal**  
 📧 Email: [chaitanyakhowal8@gmail.com](mailto:chaitanyakhowal8@gmail.com)  
-🔗 LinkedIn: [linkedin.com/in/chaitanya-khowal](https://linkedin.com/in/chaitanya-khowal)
+🔗 LinkedIn: [linkedin.com/in/chaitanyakhowal](https://linkedin.com/in/chaitanyakhowal)
