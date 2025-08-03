@@ -99,12 +99,6 @@ Open in browser: http://localhost:8080/
 
 ---
 
-<h2>📸 Screenshots (Optional)</h2>
-
-*(Add screenshots of your login, dashboard, and view-enquiry pages here for a professional touch.)*
-
----
-
 <h2>🚧 Future Enhancements</h2>
 
 - 🔒 Password encryption using **BCrypt** for improved security.  
