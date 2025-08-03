@@ -35,6 +35,7 @@ This project demonstrates <b>Spring Boot, JPA, MySQL, Thymeleaf</b>, and the <b>
 <h2>📂 Project Structure</h2>
 
 
+```
 Mini-Project-1
 │── src/main/java/com/khowal
 │   ├── controller      # Handles HTTP requests
@@ -46,7 +47,7 @@ Mini-Project-1
 │   ├── templates       # Thymeleaf HTML pages
 │   ├── application.properties
 └── pom.xml
-
+```
 ---
 
 <h2>⚙️ Setup Instructions</h2>
@@ -57,20 +58,31 @@ git clone https://github.com/ChaitanyaKhowal/CounselNet.git
 cd CounselNet
 
 ### 2️⃣ Configure MySQL Database
+
 Create a database in MySQL:
+
 CREATE DATABASE jrtp28;
+
 Update credentials in `application.properties`:
+
 spring.datasource.url=jdbc:mysql://localhost:3306/jrtp28
+
 spring.datasource.username=root
+
 spring.datasource.password=root
+
 spring.jpa.hibernate.ddl-auto=update
+
 spring.jpa.show-sql=true
 
 ### 3️⃣ Build and Run the Application
+
 mvn clean install
+
 mvn spring-boot:run
 
 ### 4️⃣ Access the Application
+
 Open in browser: http://localhost:8080/
 
 ---
