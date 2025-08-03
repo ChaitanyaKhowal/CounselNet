@@ -52,8 +52,9 @@ Mini-Project-1
 <h2>⚙️ Setup Instructions</h2>
 
 ### 1️⃣ Clone the repository
-git clone https://github.com/yourusername/Mini-Project-1.git
-cd Mini-Project-1
+git clone https://github.com/ChaitanyaKhowal/CounselNet.git
+
+cd CounselNet
 
 ### 2️⃣ Configure MySQL Database
 Create a database in MySQL:
